@@ -10680,7 +10680,7 @@ a.has-text-danger-dark:hover {
   flex-direction: column;
 }
 .book-edit button {
-  margin: 10px 0;
+  margin: 8px 0;
 }
 .book-show {
   align-self: flex-start;
@@ -10726,11 +10726,11 @@ a.has-text-danger-dark:hover {
   pointer-events: auto;
   position: relative;
   vertical-align: top;
-  width: 20px;
+  width: 10px;
 }
 .book-show .edit:after {
   color: #fff;
-  content: 'âœŽ';
+  content: '\270F';
   display: block;
   font-size: 15px;
   font-weight: 700;
