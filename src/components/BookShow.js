@@ -1,20 +1,20 @@
-import {useState} from 'react';
+import { useState } from 'react';
 import BookEdit from './BookEdit';
 
-function BookShow({book, onDelete, onEdit }) {
-  const [showEdit, setShowEdit] = useState (false);
+function BookShow({ book, onDelete, onEdit }) {
+  const [showEdit, setShowEdit] = useState(false);
 
   const handleDeleteClick = () => {
-    onDelete (book.id);
+    onDelete(book.id);
   };
 
   const handleEditClick = () => {
-    setShowEdit (!showEdit);
+    setShowEdit(!showEdit);
   };
 
   const handleSubmit = (id, newTitle) => {
-    onEdit (id, newTitle);
-    setShowEdit (false);
+    setShowEdit(false);
+    onEdit(id, newTitle);
   };
 
   let content = <h3>{book.title}</h3>;
@@ -24,16 +24,16 @@ function BookShow({book, onDelete, onEdit }) {
 
   return (
     <div className="book-show">
-    <img 
-      alt="books"
-      src={`https://picsum.photos/seed/${book.id}/300/200`}
-    />
+      <img alt="books" src={`https://picsum.photos/seed/${book.id}/300/200`} />
       <div>{content}</div>
       <div className="actions">
-        <button className="edit" onClick={handleEditClick}>Edit</button>
-        <button className="delete" onClick={handleDeleteClick}>Delete</button>
+        <button className="edit" onClick={handleEditClick}>
+          Edit
+        </button>
+        <button className="delete" onClick={handleDeleteClick}>
+          Delete
+        </button>
       </div>
-      {book.title}
     </div>
   );
 }
