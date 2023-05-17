@@ -23,8 +23,6 @@ const createBook= async(title)=> {
   SetBooks(updatedBooks);
 }
 
-
-
 const deleteBookById = async(id) => {
   await axios.delete(`http://localhost:3001/books/${id}`)
   const updatedBooks = books.filter((book) => {
