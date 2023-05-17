@@ -11,6 +11,7 @@ function App() {
 useEffect(() => {
   fetchBooks();
 }, [fetchBooks]);
+//to solve the issue of fetchbooks entering an infinite loop, we will add useCallBack to the fetchBooks function in the books.js file in the context
 
 
   return (
